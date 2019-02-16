@@ -7,8 +7,6 @@ vector<vector<int>> threeSum(vector<int>& nums) {
             int i=x+1,j=nums.size()-1;
             int target=nums[x];
             while(i<j){
-                if(i==x)    i++;
-                else if(j==x)   j--;
                     if(nums[i]+nums[j]+target==0)
                     {
                         vect.push_back({target,nums[i],nums[j]});
