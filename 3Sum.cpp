@@ -16,7 +16,7 @@ vector<vector<int>> threeSum(vector<int>& nums) {
                     else    i++;
                 }
             }
-        set<vector<int> >s(vect.begin(),vect.end());
+        set<vector<int> >s(vect.begin(),vect.end());    //removes duplicates.
          vect.assign(s.begin(),s.end());
         return vect;
     }
@@ -38,7 +38,8 @@ vector<vector<int>> threeSum(vector<int>& nums) {
                     if(nums[i]+nums[j]+target==0)
                     {
                         vect.push_back({target,nums[i],nums[j]});
-                        while(i<j && nums[i]==nums[i+1])    i++;
+                        while(i<j && nums[i]==nums[i+1])    i++;        //since vector is sorted so it 
+                                                                        //skips same consecutive numbers to avoid duplicates
                         while(i<j && nums[j]==nums[j-1])    j--;
                         i++;
                         j--;
